@@ -7,9 +7,11 @@ public class StudentPoll {
 		int[] frequency = new int[6];
 		//Å@counting frequency
 		for (int answer=0; answer<responses.length; answer++) {
+			// Exception handling
 			try {
 				++frequency[responses[answer]];
 			}
+			// can be multi
 			catch(ArrayIndexOutOfBoundsException e) {
 				System.out.println(e);
 				System.out.printf(" responses[%d] = %d\n\n", answer, responses[answer]);
